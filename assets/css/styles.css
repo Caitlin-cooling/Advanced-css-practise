@@ -1,0 +1,34 @@
+body {
+  margin: 0;
+  background-image: url('../img/main.jpg');
+  background-repeat: no-repeat;
+  color: white;
+  font-family: Quicksand;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  animation-name: navAnimation;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+}
+
+h1 {
+  padding-left: 100px;
+}
+
+h4 {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.details {
+  display: flex;
+}
+
+@keyframes navAnimation {
+  0% {opacity: 0}
+  100% {opacity: 1}
+}
