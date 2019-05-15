@@ -1,7 +1,10 @@
 body {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   background-image: url('../img/main.jpg');
   background-repeat: no-repeat;
+  background-size: 100%;
   color: white;
   font-family: Quicksand;
 }
@@ -15,20 +18,66 @@ nav {
   animation-timing-function: ease-in;
 }
 
-h1 {
-  padding-left: 100px;
-}
-
 h4 {
   padding-left: 10px;
   padding-right: 10px;
 }
 
+button {
+  padding: 10px;
+  background-color: #5159f7;
+  border: none;
+  color: white;
+  font-weight: bold;
+}
+
 .details {
   display: flex;
+}
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation-name: introAnimation;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
+}
+
+.intro h1 {
+  padding-left: 0;
+  font-size: 5em;
+}
+
+.intro h4 {
+  font-size: 1.5em;
 }
 
 @keyframes navAnimation {
   0% {opacity: 0}
   100% {opacity: 1}
+}
+
+@keyframes introAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(5%);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width:768px) {
+  button {
+    padding: 5px;
+  }
+
+  .intro h1 {
+    font-size: 3em;
+  }
+
+  .intro h4 {
+    font-size: 1em;
+  }
 }
